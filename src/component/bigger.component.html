@@ -1,0 +1,23 @@
+<label>Template reference variable<input #customerInput></label>
+
+<h3>Disabled: {{ customerInput.disabled }}</h3>
+
+<ul>
+  <li>Template input variable</li>
+  @for (customer of customers; track customer) {
+    <li>{{ customer.name }} {{$index}}/{{$count}} {{$first}} {{$last}} {{$even}} {{$odd}}</li>
+  } @empty {
+    <li>There are no items.</li>
+  }
+</ul>
+
+<span>{{customer}} {{uptSig()}} {{uptSig$ | async}}</span>
+<p>Les références sont cherchées d'abord dans le template puis dans le contexte directive puis les membres du composant</p>
+
+<button (click)="onSizeOfSubClick()">Change size of sub {{sizeOfSub}}</button>
+<jba-sub [value]="valueForSub" [(size)]="sizeOfSub"></jba-sub>
+
+<textarea #leText></textarea>
+
+<!--Not required for queries, but is for display-->
+<ng-content></ng-content>

@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {CustomNativeButtonComponent} from "../component/custom-native-button.component";
+import {OtherButtonComponent} from "../component/other-button.component";
+import {BiggerComponent} from "../component/bigger.component";
+import {SimpleDivComponent} from "../component/simple-div.component";
 
 @Component({
-  selector: 'app-root',
+  selector: 'jba-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CustomNativeButtonComponent, OtherButtonComponent, BiggerComponent, SimpleDivComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,0 +1,11 @@
+:host.vert {
+  background-color: green;
+}
+
+:host.bleu {
+  background-color: dodgerblue;
+}
+
+:host.front {
+  font-weight: bold;
+}
