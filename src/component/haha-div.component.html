@@ -1,1 +1,14 @@
 <div>Bye.</div>
+<div *ngIf="condi">
+  Equivalent to ng-template
+</div>
+<ng-template [ngIf]="condi" #tpltRef>
+  <div>
+    Equivalent (short *ngIf wouldn't have effect on ng-template)
+  </div>
+  <div>
+    can't use two structural directives on the same element
+  </div>
+</ng-template>
+<ng-container *ngTemplateOutlet="tpltRef">
+</ng-container>
