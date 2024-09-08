@@ -15,6 +15,7 @@ import {toObservable} from "@angular/core/rxjs-interop";
 import {AsyncPipe} from "@angular/common";
 import {SimpleDivComponent} from "./simple-div.component";
 import {HahaDivComponent} from "./haha-div.component";
+import {HighlightDirective} from "../directive/highlight.directive";
 
 @Component(
   {
@@ -22,7 +23,8 @@ import {HahaDivComponent} from "./haha-div.component";
     templateUrl: './bigger.component.html',
     imports: [
       SubComponent,
-      AsyncPipe
+      AsyncPipe,
+      HighlightDirective
     ],
     selector: 'jba-bigger'
   })

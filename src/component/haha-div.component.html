@@ -1,6 +1,6 @@
 <div>Bye.</div>
-<div *ngIf="condi">
-  Equivalent to ng-template
+<div *ngIf="condi as cd">
+  Equivalent to ng-template {{cd}}
 </div>
 <ng-template [ngIf]="condi" #tpltRef>
   <div>
@@ -12,3 +12,10 @@
 </ng-template>
 <ng-container *ngTemplateOutlet="tpltRef">
 </ng-container>
+<div *ngIf="condi; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  Div not rendered
+</ng-template>
+<ng-template #elseBlock>
+  Div also not rendered
+</ng-template>

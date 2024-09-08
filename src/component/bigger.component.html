@@ -3,7 +3,7 @@
 <h3>Disabled: {{ customerInput.disabled }}</h3>
 
 <ul>
-  <li>Template input variable</li>
+  <li appHighlight>Template input variable</li>
   @for (customer of customers; track customer) {
     <li>{{ customer.name }} {{$index}}/{{$count}} {{$first}} {{$last}} {{$even}} {{$odd}}</li>
   } @empty {
