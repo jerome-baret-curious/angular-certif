@@ -4,6 +4,16 @@
   <jba-bigger [titre]="title"><div><jba-simple></jba-simple></div></jba-bigger>
   <jba-loop></jba-loop>
 </main>
-
-
+<router-outlet name="aux"/>
+<nav style="display: flex;flex-direction: column">
+  <a routerLink="/myrs" routerLinkActive="myr-active" ariaCurrentWhenActive="page">Link to all</a>
+  <a [routerLink]="['/myr', myrNb]" routerLinkActive="myr-active" ariaCurrentWhenActive="page">Link to one</a>
+  <a routerLink="/lazy">Lazy</a>
+  <a routerLink="/lazytoo">Lazytoo</a>
+  <a routerLink="/lazystand">Lazycomponent</a>
+  <a [routerLink]="['',{outlets:{aux:['myraux']}}]">
+    Auxil
+  </a>
+</nav>
+<input type="number" [(ngModel)]="myrNb"/>
 <router-outlet />
