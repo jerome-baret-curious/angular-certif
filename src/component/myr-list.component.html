@@ -1,1 +1,10 @@
 <p>All {{title}}</p>
+<form>
+  <input id="amount">
+  <select [formControl]="selectCtrl">
+    @for(curr of selVals; track curr.code) {
+      <option [ngValue]="curr">{{curr.name}} ({{curr.code}})</option>
+    }
+  </select>
+  <p>{{formattedVal()}}</p>
+</form>

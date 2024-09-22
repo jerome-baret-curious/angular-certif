@@ -26,3 +26,60 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Modules
+
+**CommonModule** exports:
+- AsyncPipe
+- UpperCasePipe
+- LowerCasePipe
+- JsonPipe
+- SlicePipe
+- DecimalPipe
+- PercentPipe
+- TitleCasePipe
+- CurrencyPipe
+- DatePipe
+- I18nPluralPipe
+- I18nSelectPipe
+- KeyValuePipe
+- NgClass
+- NgComponentOutlet
+- NgForOf
+- NgIf
+- NgTemplateOutlet
+- NgStyle
+- NgSwitch
+- NgSwitchCase
+- NgSwitchDefault
+- NgPlural
+- NgPluralCase
+
+**FormsModule** and **ReactiveFormsModule** export:
+- NgNoValidate
+- NgSelectOption
+- NgSelectMultipleOption
+- DefaultValueAccessor
+- NumberValueAccessor
+- RangeValueAccessor
+- CheckboxControlValueAccessor
+- SelectControlValueAccessor
+- SelectMultipleControlValueAccessor
+- RadioControlValueAccessor
+- NgControlStatus
+- NgControlStatusGroup
+- RequiredValidator
+- MinLengthValidator
+- MaxLengthValidator
+- PatternValidator
+- CheckboxRequiredValidator
+- EmailValidator
+- MinValidator
+- MaxValidator
+
+**FormsModule**: NgModel, NgModelGroup, NgForm
+
+**ReactiveFormsModule**: FormControlDirective, FormGroupDirective,
+FormControlName, FormGroupName, FormArrayName
+
+**RouterModule**: RouterOutlet, RouterLink, RouterLinkActive, EmptyOutletComponent
