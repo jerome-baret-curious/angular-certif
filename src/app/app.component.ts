@@ -8,11 +8,10 @@ import {LoopComponent} from "../component/loop.component";
 import {FormsModule} from "@angular/forms";
 
 @Component({
-  selector: 'jba-root',
-  standalone: true,
-  imports: [RouterOutlet, CustomNativeButtonComponent, OtherButtonComponent, BiggerComponent, SimpleDivComponent, LoopComponent, RouterLink, RouterLinkActive, FormsModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'jba-root',
+    imports: [RouterOutlet, CustomNativeButtonComponent, OtherButtonComponent, BiggerComponent, SimpleDivComponent, LoopComponent, RouterLink, RouterLinkActive, FormsModule],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Angular-certif';

@@ -1,17 +1,14 @@
 import {Component} from "@angular/core";
-import {ActivatedRoute, RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+import {ActivatedRoute, RouterOutlet} from "@angular/router";
 
 @Component(
   {
-    standalone: true,
     templateUrl: './myr-detail.component.html',
     imports: [
-      RouterLink,
-      RouterLinkActive,
-      RouterOutlet
+        RouterOutlet
     ],
     selector: 'jba-myr'
-  })
+})
 export class MyrDetailComponent {
   constructor(private activatedRoute: ActivatedRoute) {
   }

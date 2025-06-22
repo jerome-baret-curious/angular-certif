@@ -3,13 +3,12 @@ import {LinkedDirective} from "../directive/linked.directive";
 
 @Component(
   {
-    standalone: true,
     templateUrl: './sub.component.html',
     imports: [
-      LinkedDirective
+        LinkedDirective
     ],
     selector: 'jba-sub'
-  })
+})
 export class SubComponent {
   @Input() value = 0;
 

@@ -5,17 +5,16 @@ import {NgClass} from "@angular/common";
 
 @Component(
   {
-    standalone: true,
     templateUrl: './simple-div.component.html',
     styleUrl: './simple-div.component.css',
     selector: 'jba-simple',
     imports: [
-      HahaDivComponent,
-      NgClass
+        HahaDivComponent,
+        NgClass
     ],
     // one instance of DeuzService per instance of SimpleDivComponent
-    providers: [DeuzService]//usable also by components/directives used in the template, no tree-shake
-  })
+    providers: [DeuzService] //usable also by components/directives used in the template, no tree-shake
+})
 export class SimpleDivComponent {
   hey = 'hey';
 }

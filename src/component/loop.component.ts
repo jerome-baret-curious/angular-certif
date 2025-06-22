@@ -1,15 +1,12 @@
 import {Component} from "@angular/core";
-import {NgForOf, NgIf, NgTemplateOutlet} from "@angular/common";
+import { NgTemplateOutlet } from "@angular/common";
 
 @Component(
   {
-    standalone: true,
     templateUrl: './loop.component.html',
     selector: 'jba-loop',
-    imports: [
-      NgForOf
-    ]
-  })
+    imports: []
+})
 export class LoopComponent {
   metals = ['Gold', 'Iron', 'Platinum', 'Silver',' Bronze']
 

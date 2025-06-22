@@ -1,6 +1,6 @@
 import {
   AfterContentChecked, AfterContentInit,
-  afterRender, AfterViewChecked, AfterViewInit,
+  afterEveryRender, AfterViewChecked, AfterViewInit,
   Component, ContentChild, ContentChildren, DoCheck,
   ElementRef, Input,
   OnChanges,
@@ -19,15 +19,14 @@ import {HighlightDirective} from "../directive/highlight.directive";
 
 @Component(
   {
-    standalone: true,
     templateUrl: './bigger.component.html',
     imports: [
-      SubComponent,
-      AsyncPipe,
-      HighlightDirective
+        SubComponent,
+        AsyncPipe,
+        HighlightDirective
     ],
     selector: 'jba-bigger'
-  })
+})
 export class BiggerComponent implements OnInit, OnDestroy, OnChanges, DoCheck, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit {
   @Input() titre!: string;
   // read option of *Child* is the return, its default depends on the selector
@@ -55,7 +54,7 @@ export class BiggerComponent implements OnInit, OnDestroy, OnChanges, DoCheck, A
   constructor() {
     console.log(1)
     // must be called in injection context
-    afterRender(() => {
+    afterEveryRender(() => {
       console.log('ta width:',this.txtArea.nativeElement.scrollWidth);
     });
   }

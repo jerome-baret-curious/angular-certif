@@ -1,5 +1,4 @@
 import {Component, computed, Input} from "@angular/core";
-import {RouterLink, RouterLinkActive} from "@angular/router";
 import {FormControl, ReactiveFormsModule} from "@angular/forms";
 import {toSignal} from "@angular/core/rxjs-interop";
 
@@ -10,15 +9,12 @@ export type SelInt = {
 
 @Component(
   {
-    standalone: true,
     templateUrl: './myr-list.component.html',
     imports: [
-      RouterLink,
-      RouterLinkActive,
-      ReactiveFormsModule
+        ReactiveFormsModule
     ],
     selector: 'jba-myrs'
-  })
+})
 export class MyrListComponent {
   @Input() title!: string; // thanks to withComponentInputBinding, is like this.activatedRoute.snapshot.data['title']
 
